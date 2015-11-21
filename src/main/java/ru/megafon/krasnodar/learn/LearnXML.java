@@ -126,12 +126,12 @@ public class LearnXML {
     }
 
     try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-      //SAXPart(br);
-      //DOMPart(br);
-      //XPathPart(br);
-      TransformPart(br);
-      //StAXPart(br);
-      //DOM4JPart(br);
+      //saxPart(br);
+      //domPart(br);
+      //xpathPart(br);
+      transformPart(br);
+      //staxPart(br);
+      //dom4JPart(br);
     }
     catch (Exception e){
       System.out.println("Ошибка: " + e);
@@ -143,7 +143,7 @@ public class LearnXML {
     }
   }
 
-  public static void SAXPart(BufferedReader br) throws Exception {
+  public static void saxPart(BufferedReader br) throws Exception {
     System.out.println("JAXP SAX:");
     LearnJAXPSAX learnJAXPSAX = new LearnJAXPSAX();
     //learnJAXPSax.readXML(TEST_XML_DATA);
@@ -158,7 +158,7 @@ public class LearnXML {
     br.readLine();
   }
 
-  public static void DOMPart(BufferedReader br) throws Exception {
+  public static void domPart(BufferedReader br) throws Exception {
     System.out.println("JAXP DOM:");
     LearnJAXPDOM learnJAXPDOM = new LearnJAXPDOM(new PrintWriter(System.out, true));
    // learnJAXPDOM.readXML(TEST_XML_DATA);
@@ -173,7 +173,7 @@ public class LearnXML {
     br.readLine();
   }
 
-  public static void XPathPart(BufferedReader br) throws Exception {
+  public static void xpathPart(BufferedReader br) throws Exception {
     System.out.println("JAXP XPath:");
     LearnJAXPXPath learnJAXPXPath = new LearnJAXPXPath();
     System.out.println(String.format("TestId = %1$s from node: %2$s", learnJAXPXPath.getValueFromXMLAsString(TEST_XML_DATA, "/Tests/Locals/Local", "TestId"), "/Tests/Locals/Local"));
@@ -182,7 +182,7 @@ public class LearnXML {
     br.readLine();
   }
 
-  public static void TransformPart(BufferedReader br) throws Exception {
+  public static void transformPart(BufferedReader br) throws Exception {
     System.out.println("JAXP Transform:");
     LearnJAXPTransform learnJAXPTransform = new LearnJAXPTransform();
 
@@ -204,7 +204,7 @@ public class LearnXML {
     br.readLine();
   }
 
-  public static void StAXPart(BufferedReader br) throws Exception {
+  public static void staxPart(BufferedReader br) throws Exception {
     System.out.println("JAXP StAX:");
     LearnJAXPStAX learnJAXPStAX = new LearnJAXPStAX();
     //learnJAXPStAX.readXMLAsCursor(TEST_XML_DATA);
@@ -223,7 +223,7 @@ public class LearnXML {
     br.readLine();
   }
 
-  public static void DOM4JPart(BufferedReader br) throws Exception {
+  public static void dom4JPart(BufferedReader br) throws Exception {
     System.out.println("DOM4J:");
     LearnDOM4J learnDOM4J = new LearnDOM4J();
     AppConfigData appConfigData = learnDOM4J.getAppConfigDataDOM4J(TEST_XML_DATA_ALL_CONFIG);

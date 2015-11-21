@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.megafon.krasnodar.learn</groupId>
-  <artifactId>learnxml</artifactId>
+  <artifactId>learn-xml</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>learnxml</name>
+  <name>learn-xml</name>
   <url>http://maven.apache.org</url>
 
   <properties>
